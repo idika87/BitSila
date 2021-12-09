@@ -53,6 +53,10 @@ Route::get('/', function () {
 	return view('admins.pages.content');
 })->middleware('SessionAdmin');
 
+Route::get('/riportpesanbln', function () {
+	return view('admins.pages.riportPbulanan');
+});
+
 Route::get('/dashboard_adm', [AdminDashboardController::class, 'index'])->middleware('SessionAdmin');
 
 Route::get('/data_admin', [AdminDataController::class, 'index']);

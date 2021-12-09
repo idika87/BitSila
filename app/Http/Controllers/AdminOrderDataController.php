@@ -27,7 +27,7 @@ class AdminOrderDataController extends Controller
         $tgl_akhir=$request->tgl_akhir;
         $order=Order::whereBetween('created_at', array($tgl_awal, $tgl_akhir))->get();
         $customer=Customer::all();
-        return view('admins/pages/order_data', compact('order','customer') );
+        return view('admins/pages/order_data', compact('order','customer', 'tgl_awal') );
     }
 
     /**

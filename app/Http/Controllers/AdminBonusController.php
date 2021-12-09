@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Bonus;
+use Alert;
 
 class AdminBonusController extends Controller
 {
@@ -36,7 +37,7 @@ class AdminBonusController extends Controller
      */
     public function store(Request $request)
     {
-
+        Alert::success('Data Berhasil Ditambah');
         $alpbonus= new Bonus;
         $alpbonus->name=$request->name;
         $alpbonus->discount=$request->discount;
@@ -82,6 +83,7 @@ class AdminBonusController extends Controller
      */
     public function update(Request $request, $id)
     {
+        Alert::success('Data Berhasil Diubah');
         $alpbonus=Bonus::where('id',$id)->first();
         $alpbonus->name=$request->name;
         $alpbonus->price=$request->price;

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Carousel;
+use Alert;
 
 class AdminCarouselsController extends Controller
 {
@@ -36,6 +37,7 @@ class AdminCarouselsController extends Controller
      */
     public function store(Request $request)
     {
+        Alert::success('Data Berhasil Ditambah');
         $file = $request->file('pictures');
         $name = $request->file('pictures')->getClientOriginalName();
         // $path = $request->file('pictures')->store('lte/dist/img/landing_page/carousel');
@@ -83,7 +85,7 @@ class AdminCarouselsController extends Controller
      */
     public function update(Request $request, $id)
     {
-
+        Alert::success('Data Berhasil Diubah');
         $file = $request->file('picture_carousel');
         if ($file) {
             $name = $request->file('picture_carousel')->getClientOriginalName();

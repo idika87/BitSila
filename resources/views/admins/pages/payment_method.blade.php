@@ -114,7 +114,7 @@
                     </div>
                     <!-- /.button -->
                     <button type="button" data-toggle="modal" data-target="#exampleModal{{$p->id}}" class="btn  btn-sm"><i class="fa fa-pen"></i></button>
-                    <a href="/payment_method/hapus/{{$p->id}}" class="btn  btn-sm"><i class="fa fa-trash"></i></a>
+                    <a pm_id="{{$p->id}}" class="btn btn-sm delete_pm"><i class="fa fa-trash"></i></a>
                   </td>
                   @endforeach
                 </tr>

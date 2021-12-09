@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Client;
+use Alert;
 
 class AdminClientController extends Controller
 {
@@ -36,6 +37,7 @@ class AdminClientController extends Controller
      */
     public function store(Request $request)
     {
+        Alert::success('Data Berhasil Diubah');
         $file = $request->file('pictures');
         $name = $request->file('pictures')->getClientOriginalName();
         
@@ -84,7 +86,7 @@ class AdminClientController extends Controller
      */
     public function update(Request $request, $id)
     {
-
+        Alert::success('Data Berhasil Ditambah');
         $file = $request->file('pictures_client');
         if ($file) {
             $name = $request->file('pictures_client')->getClientOriginalName();

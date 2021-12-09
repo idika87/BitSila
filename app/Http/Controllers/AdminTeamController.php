@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Team;
+use Alert;
 
 class AdminTeamController extends Controller
 {
@@ -36,6 +37,7 @@ class AdminTeamController extends Controller
      */
     public function store(Request $request)
     {
+        Alert::success('Data Berhasil Ditambah');
         $file = $request->file('pictures_team');
         $name = $request->file('pictures_team')->getClientOriginalName();
         
@@ -85,7 +87,7 @@ class AdminTeamController extends Controller
      */
     public function update(Request $request, $id)
     {
-
+        Alert::success('Data Berhasil Diubah');
         $file = $request->file('pictures_team');
         if ($file) {
             $name = $request->file('pictures_team')->getClientOriginalName();

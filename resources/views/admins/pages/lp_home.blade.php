@@ -146,7 +146,8 @@
                         </div>
                       </div>
                       <button type="button" data-toggle="modal" data-target="#exampleModledit{{$h->id}}" class="btn  btn-sm"><i class="fa fa-pen"></i></button>
-                      <a href="/lp_home/hapus/{{$h->id}}" class="btn  btn-sm"><i class="fa fa-trash"></i></a>
+                      
+                      <a lph_id="{{$h->id}}" class="btn btn-sm delete_lph"><i class="fa fa-trash"></i></a>
                     </td>
                     @endforeach
                   </tr>

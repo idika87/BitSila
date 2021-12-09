@@ -73,7 +73,7 @@
                     <td>{{$ad->admins_username}}</td>
                     <!-- button trash -->
                     <td>
-                      <a href="/data_admin/hapus/{{$ad->id}}" class="btn  btn-sm"><i class="fa fa-trash"></i></a>
+                      <a ad_id="{{$ad->id}}" class="btn btn-sm delete_ad"><i class="fa fa-trash"></i></a>
                     </td>
                   </tr>
                   @endforeach

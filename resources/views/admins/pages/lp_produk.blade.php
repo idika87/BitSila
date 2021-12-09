@@ -169,7 +169,8 @@
                         </div>
                       </div>
                       <button type="button" data-toggle="modal" data-target="#exampleModledit{{$p->id}}" class="btn  btn-sm"><i class="fa fa-pen"></i></button>
-                      <a href="/lp_produk/hapus/{{$p->id}}" class="btn  btn-sm"><i class="fa fa-trash"></i></a>
+                      
+                      <a lpp_id="{{$p->id}}" class="btn btn-sm delete_lpp"><i class="fa fa-trash"></i></a>
                     </td>
                     @endforeach
                   </tr>

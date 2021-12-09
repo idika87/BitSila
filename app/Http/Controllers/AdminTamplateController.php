@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Tamplate;
+use Alert;
 
 class AdminTamplateController extends Controller
 {
@@ -14,6 +15,7 @@ class AdminTamplateController extends Controller
      */
     public function index()
     {
+
         $alptamplate=Tamplate::all();
         return view('admins/pages/lp_tamplate', compact('alptamplate') );
     }
@@ -36,6 +38,7 @@ class AdminTamplateController extends Controller
      */
     public function store(Request $request)
     {
+        Alert::success('Data Berhasil Ditambah');
         $random=rand();
         $file = $request->file('pictures_thumbnail');
         $name = $request->file('pictures_thumbnail')->getClientOriginalName();
@@ -84,7 +87,7 @@ class AdminTamplateController extends Controller
      */
     public function update(Request $request, $id)
     {
-
+        Alert::success('Data Berhasil Diubah');
         $file = $request->file('pictures_thumbnail');
         if ($file) {
             $name = $request->file('pictures_thumbnail')->getClientOriginalName();
